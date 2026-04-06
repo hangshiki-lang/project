@@ -1,6 +1,7 @@
 const numbersContainer = document.getElementById('numbers-container');
 const generateButton = document.getElementById('generate-button');
 const themeToggleButton = document.getElementById('theme-toggle');
+const resetButton = document.getElementById('reset-button'); // Added reset button reference
 const htmlElement = document.documentElement;
 
 // Function to set the theme
@@ -14,6 +15,12 @@ function toggleTheme() {
     const currentTheme = htmlElement.getAttribute('data-theme');
     const newTheme = currentTheme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
+}
+
+// Function to reset the application (clear numbers)
+function resetApplication() {
+    numbersContainer.innerHTML = ''; // Clear displayed numbers
+    // Optionally, reset theme to default or last saved here if desired
 }
 
 // Apply saved theme on page load
@@ -32,6 +39,7 @@ generateButton.addEventListener('click', () => {
 });
 
 themeToggleButton.addEventListener('click', toggleTheme);
+resetButton.addEventListener('click', resetApplication); // Added event listener for reset button
 
 function generateLottoNumbers() {
     const numbers = new Set();
