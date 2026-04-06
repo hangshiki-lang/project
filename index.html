@@ -3,17 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotto Number Generator</title>
+    <title>Gmarket-like Layout</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <button id="theme-toggle">Toggle Theme</button>
-        <h1>Lotto Number Generator</h1>
-        <div id="numbers-container" class="numbers-container"></div>
-        <button id="generate-button">Generate Numbers</button>
-        <button id="reset-button">Reset</button>
-    </div>
+    <header class="gmarket-header">
+        <div class="header-top">
+            <div class="logo">Gmarket</div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search Gmarket">
+                <button>Search</button>
+            </div>
+            <nav class="user-nav">
+                <button id="theme-toggle">Toggle Theme</button>
+                <a href="#">Login</a>
+                <a href="#">Cart</a>
+            </nav>
+        </div>
+        <nav class="main-nav">
+            <a href="#">Category 1</a>
+            <a href="#">Category 2</a>
+            <a href="#">Category 3</a>
+        </nav>
+    </header>
+
+    <main class="gmarket-main-content">
+        <div class="container">
+            <h1>Lotto Number Generator</h1>
+            <div id="numbers-container" class="numbers-container"></div>
+            <button id="generate-button">Generate Numbers</button>
+            <button id="reset-button">Reset</button>
+        </div>
+    </main>
+
+    <footer class="gmarket-footer">
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Customer Service</a>
+            <a href="#">Terms & Conditions</a>
+        </div>
+        <p>&copy; 2023 Gmarket Clone</p>
+    </footer>
+
     <script src="main.js"></script>
     <div id="disqus_thread"></div>
     <script>
