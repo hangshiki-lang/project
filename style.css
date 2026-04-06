@@ -2,8 +2,6 @@
     --background-color: #f0f0f0;
     --text-color: #333;
     --container-bg-color: #fff;
-    --number-bg-color: #fff; /* Not used anymore, but keeping for consistency */
-    --number-border-color: #ccc; /* Not used anymore, but keeping for consistency */
     --button-bg-color: #007bff;
     --button-text-color: #fff;
     --header-bg-color: #fff;
@@ -13,14 +11,14 @@
     --link-color: #007bff;
     --product-item-bg: #fff;
     --product-item-border: #eee;
+    --section-bg-color: #fff;
+    --section-border-color: #eee;
 }
 
 [data-theme="dark"] {
     --background-color: #333;
     --text-color: #f0f0f0;
     --container-bg-color: #444;
-    --number-bg-color: #555; /* Not used anymore */
-    --number-border-color: #777; /* Not used anymore */
     --button-bg-color: #0056b3;
     --button-text-color: #fff;
     --header-bg-color: #222;
@@ -30,6 +28,8 @@
     --link-color: #66aaff;
     --product-item-bg: #555;
     --product-item-border: #666;
+    --section-bg-color: #444;
+    --section-border-color: #555;
 }
 
 body {
@@ -72,13 +72,15 @@ body {
     border: 1px solid #ccc;
     border-radius: 4px 0 0 4px;
     width: 300px;
+    color: var(--text-color); /* Ensure input text is visible in dark mode */
+    background-color: var(--container-bg-color); /* Ensure input background is visible */
 }
 
 .gmarket-header .search-bar button {
     padding: 8px 12px;
-    background-color: var(--button-bg-color); /* Use theme variable */
-    color: var(--button-text-color); /* Use theme variable */
-    border: 1px solid var(--button-bg-color); /* Use theme variable */
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: 1px solid var(--button-bg-color);
     border-radius: 0 4px 4px 0;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
@@ -114,86 +116,62 @@ body {
     padding: 20px;
     max-width: 1200px;
     margin: 20px auto;
-    background-color: var(--container-bg-color);
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    /* background-color: var(--container-bg-color); Removed as sections will have their own backgrounds */
+    /* border-radius: 8px; */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); */
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* New Styles for Banners */
-.banners {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    margin-bottom: 30px;
-    padding: 15px;
-    background-color: var(--background-color); /* Lighter background for banner section */
+/* General Section Styling */
+.gmarket-main-content section {
+    background-color: var(--section-bg-color);
+    border: 1px solid var(--section-border-color);
     border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.03);
-    flex-wrap: wrap; /* Allow banners to wrap */
-}
-
-.banners h2 {
-    width: 100%;
-    text-align: center;
-    margin-top: 0;
-    color: var(--text-color);
-}
-
-.banner-item {
-    flex: 1;
-    min-width: 200px; /* Minimum width for banners */
-    height: 100px;
-    background-color: #aaddff; /* Example banner color */
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 1.2em;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-[data-theme="dark"] .banner-item {
-    background-color: #3a5c7c; /* Darker example banner color */
-}
-
-
-/* New Styles for Product Grid */
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.product-grid h2 {
-    grid-column: 1 / -1; /* Make heading span all columns */
-    text-align: center;
+    padding: 20px;
     margin-bottom: 20px;
-    color: var(--text-color);
-}
-
-.product-item {
-    background-color: var(--product-item-bg);
-    border: 1px solid var(--product-item-border);
-    border-radius: 8px;
-    padding: 15px;
-    text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.product-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin-bottom: 10px;
+.gmarket-main-content h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--text-color);
 }
 
-.product-item h3 {
+/* Wide Banner */
+.wide-banner {
+    padding: 0; /* Remove padding from general section style */
+    border: none; /* Remove border from general section style */
+    box-shadow: none; /* Remove shadow from general section style */
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+.wide-banner img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Mid Banner */
+.mid-banner .banner-group {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.mid-banner .banner-group img {
+    max-width: 32%; /* Approx 3 banners per row */
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Product Modules - General */
+.product-module h3 {
     font-size: 1.1em;
     margin: 10px 0 5px;
     color: var(--text-color);
@@ -211,9 +189,78 @@ body {
     color: #ff5c5c;
 }
 
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* Product Grids */
+.product-grid-small {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.product-grid-tiny {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 10px;
+}
+
+.product-item {
+    background-color: var(--product-item-bg);
+    border: 1px solid var(--product-item-border);
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Split Module (Emart & Star Delivery) */
+.split-module {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.split-section {
+    flex: 1;
+    min-width: 300px;
+    border: 1px solid var(--section-border-color);
+    border-radius: 8px;
+    padding: 15px;
+    background-color: var(--section-bg-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.split-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.split-section .product-grid-tiny {
+    margin-top: 10px;
+}
+
+/* Super Deal Specifics */
+.super-deal .product-item p {
+    color: #e60000;
+}
+.super-deal .product-item p del {
+    color: var(--text-color);
+    opacity: 0.7;
+    margin-right: 5px;
+}
+
+
 /* Existing button style modified to cover theme toggle */
 #theme-toggle {
-    padding: 8px 12px; /* Smaller padding to fit header */
+    padding: 8px 12px;
     font-size: 0.9em;
     margin-right: 15px;
     margin-bottom: 0;
@@ -224,9 +271,9 @@ body {
     color: var(--footer-text-color);
     padding: 20px;
     text-align: center;
-    border-top: 1px solid #eee;
+    border-top: 1px solid var(--section-border-color); /* Use theme variable */
     margin-top: 20px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .gmarket-footer .footer-links a {
