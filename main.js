@@ -5,6 +5,7 @@ const htmlElement = document.documentElement;
 function setTheme(theme) {
     htmlElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
+    themeToggleButton.textContent = theme === 'light' ? '다크모드' : '라이트모드';
 }
 
 // Function to toggle the theme

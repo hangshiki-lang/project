@@ -1,183 +1,244 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="ko" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gmarket-like Layout</title>
+    <title>Gmarket | 쇼핑을 바꾸는 쇼핑</title>
     <link rel="stylesheet" href="style.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5082813491762785"
-     crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="gmarket-header">
-        <div class="header-top">
-            <div class="logo">Gmarket</div>
-            <div class="search-bar">
-                <input type="text" placeholder="Search Gmarket">
-                <button>Search</button>
+        <div class="header-inner">
+            <div class="he2ader-top">
+                <a href="#" class="logo">G<span>market</span></a>
+                <div class="search-bar">
+                    <input type="text" placeholder="찾고 싶은 상품을 검색해보세요!">
+                    <button>검색</button>
+                </div>
+                <nav class="user-nav">
+                    <button id="theme-toggle">다크모드</button>
+                    <a href="#">로그인</a>
+                    <a href="#">회원가입</a>
+                    <a href="#">주문배송</a>
+                    <a href="#">장바구니</a>
+                </nav>
             </div>
-            <nav class="user-nav">
-                <button id="theme-toggle">Toggle Theme</button>
-                <a href="#">Login</a>
-                <a href="#">Cart</a>
+            <nav class="main-nav">
+                <a href="#">오늘은</a>
+                <a href="#">슈퍼딜</a>
+                <a href="#">이마트</a>
+                <a href="#">스타배송</a>
+                <a href="#">디지털/가전</a>
+                <a href="#">패션/뷰티</a>
+                <a href="#">식품</a>
+                <a href="#">베스트</a>
             </nav>
         </div>
-        <nav class="main-nav">
-            <a href="#">Category 1</a>
-            <a href="#">Category 2</a>
-            <a href="#">Category 3</a>
-        </nav>
     </header>
 
     <main class="gmarket-main-content">
-        <!-- Top Wide Banner -->
+        <!-- 메인 와이드 배너 -->
         <section class="wide-banner">
-            <img src="https://via.placeholder.com/1200x200?text=Top+Wide+Banner" alt="Top Wide Banner">
-        </section>
-
-        <!-- Mid Banner -->
-        <section class="mid-banner">
-            <h2>Special Offers</h2>
-            <div class="banner-group">
-                <img src="https://via.placeholder.com/400x150?text=Mid+Banner+1" alt="Mid Banner 1">
-                <img src="https://via.placeholder.com/400x150?text=Mid+Banner+2" alt="Mid Banner 2">
-                <img src="https://via.placeholder.com/400x150?text=Mid+Banner+3" alt="Mid Banner 3">
+            <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=1200&q=80" alt="메인 배너">
+            <div class="banner-overlay">
+                <h1 style="font-size: 48px; margin-bottom: 20px;">Gmarket Grand Sale</h1>
+                <p style="font-size: 24px;">최대 70% 할인 혜택을 만나보세요</p>
             </div>
         </section>
 
-        <!-- Best Selling Products Module -->
-        <section class="product-module best-selling">
-            <h2>지금 제일 잘나가는 상품 (Best Selling)</h2>
-            <div class="product-grid-small">
-                <div class="product-item">
-                    <img src="https://via.placeholder.com/100x100?text=Refrigerator" alt="Refrigerator">
-                    <h3>냉장고 (Refrigerator)</h3>
-                    <p>₩1,200,000</p>
-                </div>
-                <div class="product-item">
-                    <img src="https://via.placeholder.com/100x100?text=Roborock" alt="Roborock">
-                    <h3>로보락 (Roborock)</h3>
-                    <p>₩850,000</p>
-                </div>
-                <div class="product-item">
-                    <img src="https://via.placeholder.com/100x100" alt="Best Seller 3">
-                    <h3>Product C</h3>
-                    <p>₩8,000</p>
-                </div>
-                <div class="product-item">
-                    <img src="https://via.placeholder.com/100x100" alt="Best Seller 4">
-                    <h3>Product D</h3>
-                    <p>₩35,000</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Emart Mall & Star Delivery -->
-        <section class="split-module">
-            <div class="split-section emart-mall">
-                <h2>이마트몰 (Emart Mall)</h2>
-                <img src="https://via.placeholder.com/300x100?text=Emart+Mall+Banner" alt="Emart Mall Banner">
-                <div class="product-grid-tiny">
-                    <div class="product-item">
-                        <img src="https://via.placeholder.com/50x50" alt="Emart Product 1">
-                        <p>Emart Item 1</p>
-                    </div>
-                    <div class="product-item">
-                        <img src="https://via.placeholder.com/50x50" alt="Emart Product 2">
-                        <p>Emart Item 2</p>
-                    </div>
-                </div>
-            </div>
-            <div class="split-section star-delivery">
-                <h2>스타배송 (Star Delivery)</h2>
-                <img src="https://via.placeholder.com/300x100?text=Star+Delivery+Banner" alt="Star Delivery Banner">
-                <div class="product-item">
-                    <img src="https://via.placeholder.com/50x50" alt="Star Product 1">
-                    <p>Star Item 1</p>
-                </div>
-                <div class="product-item">
-                    <img src="https://via.placeholder.com/50x50" alt="Star Product 2">
-                    <p>Star Item 2</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Homeplus Same-Day Delivery Module -->
-        <section class="product-module homeplus-delivery">
-            <h2>홈플러스 당일배송 (Homeplus Same-Day Delivery)</h2>
-            <img src="https://via.placeholder.com/600x150?text=Homeplus+Banner" alt="Homeplus Banner">
-            <div class="product-grid-small">
-                <div class="product-item">
-                    <img src="https://via.placeholder.com/100x100" alt="Homeplus Product 1">
-                    <h3>Homeplus Item 1</h3>
-                    <p>₩10,000</p>
-                </div>
-                <div class="product-item">
-                    <img src="https://via.placeholder.com/100x100" alt="Homeplus Product 2">
-                    <h3>Homeplus Item 2</h3>
-                    <p>₩18,000</p>
-                </div>
-                <div class="product-item">
-                    <img src="https://via.placeholder.com/100x100" alt="Homeplus Product 3">
-                    <h3>Homeplus Item 3</h3>
-                    <p>₩7,500</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Super Deal Module -->
+        <!-- 슈퍼딜 섹션 -->
         <section class="product-module super-deal">
             <h2>슈퍼딜 (Super Deal)</h2>
             <div class="product-grid-small">
                 <div class="product-item">
-                    <img src="https://via.placeholder.com/100x100?text=Super+Refrigerator+Deal" alt="Super Refrigerator Deal">
-                    <h3>냉장고 슈퍼딜</h3>
-                    <p><del>₩1,500,000</del> ₩1,000,000</p>
+                    <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=300&q=80" alt="노트북">
+                    <h3>[특가] 고성능 게이밍 노트북 최신형 모델</h3>
+                    <div class="price">₩990,000</div>
                 </div>
                 <div class="product-item">
-                    <img src="https://via.placeholder.com/100x100?text=Super+Roborock+Deal" alt="Super Roborock Deal">
-                    <h3>로보락 슈퍼딜</h3>
-                    <p><del>₩1,000,000</del> ₩700,000</p>
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=300&q=80" alt="시계">
+                    <h3>프리미엄 스마트워치 7세대 (한정수량)</h3>
+                    <div class="price">₩245,000</div>
                 </div>
                 <div class="product-item">
-                    <img src="https://via.placeholder.com/100x100" alt="Super Deal 3">
-                    <h3>Super Deal Product 3</h3>
-                    <p><del>₩15,000</del> ₩7,000</p>
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=300&q=80" alt="헤드셋">
+                    <h3>노이즈 캔슬링 무선 헤드폰 PRO</h3>
+                    <div class="price">₩189,000</div>
+                </div>
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=300&q=80" alt="운동화">
+                    <h3>데일리 런닝화 특가전 전품목 세일</h3>
+                    <div class="price">₩45,000</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 배송 브랜드 섹션 -->
+        <div class="split-module">
+            <!-- 이마트몰 -->
+            <section class="split-section">
+                <div class="brand-header">
+                    <h2>이마트몰 (Emart)</h2>
+                    <a href="#" style="font-size: 14px; color: #666;">더보기 ></a>
+                </div>
+                <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=600&q=80" alt="이마트 배너" class="brand-banner">
+                <div class="product-grid-small" style="grid-template-columns: 1fr 1fr;">
+                    <div class="product-item">
+                        <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=150&q=80" alt="신선식품">
+                        <h3>신선한 유기농 딸기 500g</h3>
+                        <div class="price">₩8,900</div>
+                    </div>
+                    <div class="product-item">
+                        <img src="https://images.unsplash.com/photo-1550989460-0adf9ea622e2?auto=format&fit=crop&w=150&q=80" alt="우유">
+                        <h3>프리미엄 저지방 우유 1L x 2팩</h3>
+                        <div class="price">₩4,500</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 스타배송 -->
+            <section class="split-section">
+                <div class="brand-header">
+                    <h2>스타배송 (Fast Delivery)</h2>
+                    <a href="#" style="font-size: 14px; color: #666;">더보기 ></a>
+                </div>
+                <img src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaad5b?auto=format&fit=crop&w=600&q=80" alt="배송 배너" class="brand-banner">
+                <div class="product-grid-small" style="grid-template-columns: 1fr 1fr;">
+                    <div class="product-item">
+                        <img src="https://images.unsplash.com/photo-1526170315870-efcd38c594b2?auto=format&fit=crop&w=150&q=80" alt="카메라">
+                        <h3>즉석 카메라 스타터 키트</h3>
+                        <div class="price">₩120,000</div>
+                    </div>
+                    <div class="product-item">
+                        <img src="https://images.unsplash.com/photo-1544650030-3c519eb30013?auto=format&fit=crop&w=150&q=80" alt="화장품">
+                        <h3>수분 촉촉 기초 화장품 세트</h3>
+                        <div class="price">₩35,000</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- 특별 할인 섹션 -->
+        <section class="product-module special-discounts">
+            <h2>특별 할인 (Special Discounts)</h2>
+            <div class="product-grid-small">
+                <div class="product-item">
+                    <div class="discount-badge">50%</div>
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=300&q=80" alt="할인 상품 1">
+                    <h3>[반값특가] 프리미엄 무선 충전기</h3>
+                    <div class="price-container">
+                        <span class="original-price">₩50,000</span>
+                        <span class="price">₩25,000</span>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="discount-badge">30%</div>
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=300&q=80" alt="할인 상품 2">
+                    <h3>[깜짝세일] 노이즈캔슬링 이어폰</h3>
+                    <div class="price-container">
+                        <span class="original-price">₩100,000</span>
+                        <span class="price">₩70,000</span>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="discount-badge">40%</div>
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=300&q=80" alt="할인 상품 3">
+                    <h3>[기간한정] 클래식 런닝화</h3>
+                    <div class="price-container">
+                        <span class="original-price">₩150,000</span>
+                        <span class="price">₩90,000</span>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="discount-badge">20%</div>
+                    <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=300&q=80" alt="할인 상품 4">
+                    <h3>[베스트] 울트라 슬림 노트북 파우치</h3>
+                    <div class="price-container">
+                        <span class="original-price">₩40,000</span>
+                        <span class="price">₩32,000</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 브랜드 쇼케이스 섹션 -->
+        <section class="brand-showcase">
+            <h2>브랜드 쇼케이스 (Brand Showcase)</h2>
+            <div class="brand-grid">
+                <div class="brand-item">
+                    <img src="https://logo.clearbit.com/samsung.com" alt="삼성전자">
+                    <span>삼성전자</span>
+                </div>
+                <div class="brand-item">
+                    <img src="https://logo.clearbit.com/lg.com" alt="LG전자">
+                    <span>LG전자</span>
+                </div>
+                <div class="brand-item">
+                    <img src="https://logo.clearbit.com/nike.com" alt="나이키">
+                    <span>나이키</span>
+                </div>
+                <div class="brand-item">
+                    <img src="https://logo.clearbit.com/adidas.com" alt="아디다스">
+                    <span>아디다스</span>
+                </div>
+                <div class="brand-item">
+                    <img src="https://logo.clearbit.com/apple.com" alt="애플">
+                    <span>애플</span>
+                </div>
+                <div class="brand-item">
+                    <img src="https://logo.clearbit.com/sony.com" alt="소니">
+                    <span>소니</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 당일배송 섹션 -->
+        <section class="product-module same-day">
+            <h2>홈플러스 당일배송 (Same-day)</h2>
+            <div class="product-grid-small">
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1598128558393-70ff21433be0?auto=format&fit=crop&w=200&q=80" alt="계란">
+                    <h3>무항생제 신선란 30구</h3>
+                    <div class="price">₩6,900</div>
+                </div>
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=200&q=80" alt="고기">
+                    <h3>한우 1등급 등심 구이용 300g</h3>
+                    <div class="price">₩29,900</div>
+                </div>
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1550583724-125581cc255b?auto=format&fit=crop&w=200&q=80" alt="빵">
+                    <h3>갓 구운 베이커리 모닝빵 12입</h3>
+                    <div class="price">₩3,900</div>
+                </div>
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1628102422280-082df3f05816?auto=format&fit=crop&w=200&q=80" alt="생수">
+                    <h3>천연 암반수 2L x 12병</h3>
+                    <div class="price">₩5,500</div>
+                </div>
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1563203369-26f2e4a5ccf7?auto=format&fit=crop&w=200&q=80" alt="과일">
+                    <h3>당도보장 고당도 오렌지 10개입</h3>
+                    <div class="price">₩12,900</div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="gmarket-footer">
-        <div class="footer-links">
-            <a href="#">About Us</a>
-            <a href="#">Customer Service</a>
-            <a href="#">Terms & Conditions</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
+        <div class="footer-inner">
+            <div class="footer-links">
+                <a href="#">회사소개</a>
+                <a href="#">이용약관</a>
+                <a href="#">개인정보처리방침</a>
+                <a href="#">고객센터</a>
+                <a href="#">판매자서비스</a>
+            </div>
+            <p>&copy; 2024 Gmarket Corp. All rights reserved.</p>
+            <p style="margin-top: 10px; font-size: 11px;">지마켓(주)는 통신판매중개자이며 통신판매의 당사자가 아닙니다. 상품, 상품정보, 거래에 관한 의무와 책임은 판매자에게 있습니다.</p>
         </div>
-        <p>&copy; 2023 Gmarket Clone</p>
     </footer>
 
     <script src="main.js"></script>
-    <div id="disqus_thread"></div>
-    <script>
-        /**
-        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-        /*
-        var disqus_config = function () {
-        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        };
-        */
-        (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.src = 'https://site-cqzu62ny2i.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </body>
 </html>
